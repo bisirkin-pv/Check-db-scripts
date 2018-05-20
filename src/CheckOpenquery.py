@@ -7,7 +7,7 @@ FILE = 'testGood.sql'
 
 
 # Check file on contains openquery
-class CheckQpenquery:
+class CheckOpenquery:
     def __init__(self, input_file):
         self.__filename = input_file
         self.__pattern_one = re.compile(r'[ ]+openquery\b', re.I)
@@ -55,7 +55,7 @@ def get_file_list(current_dir):
 
 
 def run(check_file, show_all_info):
-    check_openquery = CheckQpenquery(check_file)
+    check_openquery = CheckOpenquery(check_file)
     check_openquery.check()
     check_openquery.print_name()
     if show_all_info:
