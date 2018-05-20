@@ -63,9 +63,9 @@ def run(check_file, show_all_info):
     return check_openquery.result()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # TODO: Add parameter path folder
     start_time = time.time()
-    files = get_file_list(os.getcwd())
+    files = get_file_list("../test")
     count_error_file = 0
     count_error_line = 0
     print('Start check file\n')
